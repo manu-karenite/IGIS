@@ -1,0 +1,85 @@
+.feedback {
+  background-color: #4b56d2;
+  color: #f1f6f5;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.feedback_left {
+  margin-right: 5px;
+}
+.feedback_right {
+  margin-left: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.canvas {
+  background-color: #472183;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.canvas_left {
+  padding: 20px;
+}
+.canvas_left img {
+  height: 15rem;
+}
+.canvas_right {
+  text-align: center;
+}
+.first {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 3rem;
+}
+.second {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.third {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.phase2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.phase2_left {
+  background-color: #ffffff;
+  width: 50%;
+  padding: 20px;
+}
+
+.phase2_right {
+  background-color: #4b56d2;
+  width: 50%;
+  padding: 20px;
+}
+
+.finalStart {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.finalStart button {
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #4b56d2;
+  width: 60%;
+  color: white;
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 10px 2px;
+  border: #4b56d2;
+  cursor: pointer;
+}

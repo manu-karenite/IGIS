@@ -1,0 +1,29 @@
+.feedback {
+  background-color: #4b56d2;
+  color: #f1f6f5;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.feedback_left {
+  margin-right: 5px;
+}
+.feedback_right {
+  margin-left: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.preface {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.preface_right {
+  width: 60%;
+}
