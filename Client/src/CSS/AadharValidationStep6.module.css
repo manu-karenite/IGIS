@@ -27,3 +27,38 @@
 .preface_right {
   width: 60%;
 }
+.result img {
+  height: 400px;
+  width: 400px;
+}
+.result {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.panel {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel button {
+  margin-top: 20px;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #4b56d2;
+  width: 100%;
+  color: white;
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 10px 2px;
+  border: #4b56d2;
+  cursor: pointer;
+  padding: 10px 30px;
+}
+.out_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
