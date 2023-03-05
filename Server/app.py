@@ -8,8 +8,12 @@ from flask_cors import CORS
 from flask import request
 import numpy as np
 import requests
+import replicate
+import os
+
 app=Flask(__name__)
 CORS(app)
+
 
 cloudinary.config( 
   cloud_name = "pet-life", 
@@ -109,6 +113,60 @@ def compareImages():
     # error = mse(img1, img2)
     # print("Image matching Error between the two images:", mse)
     return {"msg":str(error)}
+@app.route("/generate-video",methods = ['POST']) 
+def generate_video():
+    os.environ["REPLICATE_API_TOKEN"] = "31cc8b413eda51e3cd24c01a3ba0b41b1ceff314"
+    ans=(request.data.decode("utf-8"))
+    ans=ans[12:]
+    ans=ans[::-1]
+    ans=ans[2:]
+    ans=ans[::-1]
+    print(ans)
+    model = replicate.models.get("yuval-alaluf/sam")
+    version = model.versions.get("9222a21c181b707209ef12b5e0d7e94c994b58f01c7b2fec075d2e892362f13c")
+    inputs = {
+    # facial image
+    'image': ans,
+
+    # age of the output image, when choose 'default' a gif for age from 0,
+    # 10, 20,...,to 100 will be displayed
+    'target_age': "default",
+    }
+    output = version.predict(**inputs)
+    print(output)   
+    return {"msg":output} 
+
+@app.route("/generate-image",methods = ['POST']) 
+def generate_image():
+    os.environ["REPLICATE_API_TOKEN"] = "31cc8b413eda51e3cd24c01a3ba0b41b1ceff314"
+    ans=(request.data.decode("utf-8"))
+
+    ans=ans.split(",")
+
+    link=ans[0]
+
+    link=link[12:]
+    link=link[::-1][1:][::-1]
+    print(link)
+
+    age=ans[1]
+    age=age[6:]
+    age=age[::-1][1:][::-1]
+    print(age)
+
+    model = replicate.models.get("yuval-alaluf/sam")
+    version = model.versions.get("9222a21c181b707209ef12b5e0d7e94c994b58f01c7b2fec075d2e892362f13c")
+    inputs = {
+    # facial image
+    'image': link,
+
+    # age of the output image, when choose 'default' a gif for age from 0,
+    # 10, 20,...,to 100 will be displayed
+    'target_age': str(age),
+    }
+    output = version.predict(**inputs)
+    print(output)   
+    return {"msg":output} 
 
 
 if __name__ == "__main__":

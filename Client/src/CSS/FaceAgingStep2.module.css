@@ -1,0 +1,91 @@
+.feedback {
+  background-color: #ffa500;
+  color: #f1f6f5;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.feedback_left {
+  margin-right: 5px;
+}
+.feedback_right {
+  margin-left: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.preface {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.preface_right {
+  width: 60%;
+}
+.uploadOuter {
+  margin: 30px;
+}
+.stepTitle {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+.uploadedImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.uploadedImage img {
+  height: 400px;
+  margin: 10px;
+}
+.controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.control_left div {
+  font-weight: bold;
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0px;
+}
+.control_right {
+  font-weight: bold;
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0px;
+}
+.select_image_age {
+  font-size: 20px !important;
+  background-color: #ffd8a9;
+  border: 1px solid #ffd8a9;
+  border-radius: 5px;
+}
+.panel {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel button {
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #ffa500;
+  width: 20%;
+  color: white;
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 10px 2px;
+  border: #ffa500;
+  cursor: pointer;
+}

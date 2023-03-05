@@ -1,0 +1,66 @@
+.feedback {
+  background-color: #ffa500;
+  color: #f1f6f5;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.feedback_left {
+  margin-right: 5px;
+}
+.feedback_right {
+  margin-left: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.preface {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.preface_right {
+  width: 60%;
+}
+.stepTitle {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+.row_outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.row_outer div .image img {
+  height: 400px;
+}
+.row_outer div {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.out_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.panel button {
+  margin: 20px 0px;
+  font-family: "IBM Plex Sans", sans-serif;
+  background-color: #ffa500;
+  width: 100%;
+  color: white;
+  font-weight: normal;
+  font-size: 1.5rem;
+  padding: 10px 2px;
+  border: #ffa500;
+  cursor: pointer;
+  padding: 10px 30px;
+}

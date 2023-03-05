@@ -9,6 +9,11 @@ import AadharValidationStep3 from "./Pages/AadharValidationStep3.js";
 import AadharValidationStep4 from "./Pages/AadharValidationStep4.js";
 import AadharValidationStep5 from "./Pages/AadharValidationStep5.js";
 import AadharValidationStep6 from "./Pages/AadharValidationStep6.js";
+
+import FaceAging from "./Pages/FaceAging";
+import FaceAgingStep1 from "./Pages/FaceAgingStep1";
+import FaceAgingStep2 from "./Pages/FaceAgingStep2";
+import FaceAgingStep3 from "./Pages/FaceAgingStep3";
 import App from "./App";
 
 import reportWebVitals from "./reportWebVitals";
@@ -27,6 +32,11 @@ const router = createBrowserRouter([
   { path: "/aadhar-validation/step4", element: <AadharValidationStep4 /> },
   { path: "/aadhar-validation/step5", element: <AadharValidationStep5 /> },
   { path: "/aadhar-validation/step6", element: <AadharValidationStep6 /> },
+
+  { path: "/face-aging", element: <FaceAging /> },
+  { path: "/face-aging/step1", element: <FaceAgingStep1 /> },
+  { path: "/face-aging/step2", element: <FaceAgingStep2 /> },
+  { path: "/face-aging/step3", element: <FaceAgingStep3 /> },
 ]);
 
 root.render(<RouterProvider router={router} />);

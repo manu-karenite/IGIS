@@ -23,6 +23,8 @@ export default function BasicModal({
   handleClose,
   handleOpen,
   path,
+  text,
+  color,
 }) {
   const navigate = useNavigate();
   return (
@@ -42,11 +44,11 @@ export default function BasicModal({
             sx={{ mt: 1 }}
             align="justify"
           >
-            Aadhar Validation requires Images to be uploaded/captured. ImageMe
+            {`${text} requires Images to be uploaded/captured. ImageMe
             does not store the data of the user, and immediately deletes the
-            data from our Database.
+            data from our Database.`}
             <br />
-            Do you want to Continue?
+            {`Do you want to Continue?`}
           </Typography>
           <br />
           <div
@@ -62,10 +64,15 @@ export default function BasicModal({
                 handleClose();
                 navigate(path);
               }}
+              sx={{ backgroundColor: `${color}` }}
             >
               Proceed
             </Button>
-            <Button variant="outlined" onClick={handleClose}>
+            <Button
+              variant="outlined"
+              sx={{ borderColor: `${color}` }}
+              onClick={handleClose}
+            >
               Go Back
             </Button>
           </div>

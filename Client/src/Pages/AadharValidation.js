@@ -24,6 +24,8 @@ const AaadharValidation = () => {
           handleOpen={handleOpen}
           handleClose={handleClose}
           path="/aadhar-validation/step1"
+          text="Aadhar Verification"
+          color="#4b56d2"
         />{" "}
         <div className={styles.feedback}>
           {" "}
@@ -41,7 +43,7 @@ const AaadharValidation = () => {
             />
           </div>
           <div className={styles.canvas_right}>
-            <div className={styles.first}>AADHAR VERIFICATION</div>
+            <div className={styles.first}>Aadhar Verification</div>
             <br />
             <div className={styles.second}>
               Verify Client’s Identity <br />
