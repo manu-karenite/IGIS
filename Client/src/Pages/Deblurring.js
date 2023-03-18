@@ -1,12 +1,13 @@
 import React from "react";
 
-import styles from "../CSS/AadharValidation.module.css";
+import styles from "../CSS/Deblurring.module.css";
 import Steps from "../Components/Steps.js";
 import List from "../Components/List.js";
 import WarningModal from "../Components/WarningModal.js";
 import { useNavigate } from "react-router-dom";
 import Feedback from "../Components/Feedback.js";
-const AaadharValidation = () => {
+
+const Deblurring = () => {
   //for Warning Modal
   const navigate = useNavigate();
   const [open, setOpen] = React.useState(false);
@@ -24,41 +25,29 @@ const AaadharValidation = () => {
           setOpen={setOpen}
           handleOpen={handleOpen}
           handleClose={handleClose}
-          path="/aadhar-validation/step1"
-          text="Aadhar Verification"
-          color="#4b56d2"
+          path="/deblurring/step1"
+          text="Image Deblurring"
+          color="#8fa600"
         />{" "}
-        <Feedback color="#4b56d2" />
+        <Feedback color="#babc4c" />
         <div className={styles.canvas}>
           <div className={styles.canvas_left}>
             <img
-              src="https://res.cloudinary.com/techbuy/image/upload/v1672237814/aadhar_logo_va4cp0.png"
+              src="https://res.cloudinary.com/pet-life/image/upload/v1679164882/faces-logo-27011216_sltkon.png"
               alt="Aadhar Logo"
-              onClick={() => navigate("/aadhar-validation")}
+              onClick={() => navigate("/deblurring")}
             />
           </div>
           <div className={styles.canvas_right}>
-            <div className={styles.first}>Aadhar Verification</div>
+            <div className={styles.first}>Image Deblurring</div>
             <br />
             <div className={styles.second}>
-              Verify Client’s Identity <br />
-              Realtime x AADHAR Verification
+              When life gets blurry, <br />
+              Adjust your Focus
             </div>
             <br />
             <br />
-            <div className={styles.third}>“ Securing India Digitally ”</div>
-          </div>
-        </div>
-        <div className={styles.phase2}>
-          <div className={styles.phase2_left}>
-            <center>
-              <Steps />
-            </center>
-          </div>
-          <div className={styles.phase2_right}>
-            <center>
-              <List />
-            </center>
+            <div className={styles.third}>---Image Improvement Module---</div>
           </div>
         </div>
         <div className={styles.finalStart}>
@@ -69,4 +58,4 @@ const AaadharValidation = () => {
   );
 };
 
-export default AaadharValidation;
+export default Deblurring;

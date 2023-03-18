@@ -1,6 +1,8 @@
 import React from "react";
 import WarningModal from "../Components/WarningModal.js";
 import styles from "../CSS/FaceAging.module.css";
+import Feedback from "../Components/Feedback.js";
+
 const FaceAging = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -20,13 +22,8 @@ const FaceAging = () => {
         text="Face Aging"
         color="#ffa500"
       />
-      <div className={styles.feedback}>
-        {" "}
-        <div className={styles.feedback_left}>
-          Want to help us getting a testcase?{" "}
-        </div>
-        <div className={styles.feedback_right}>Please Visit Here &rarr;</div>{" "}
-      </div>
+      <Feedback color="#ffa500" />
+
       <div className={styles.canvas}>
         <div className={styles.first}>Face Aging Model</div>
         <div className={styles.canvas_quote}>

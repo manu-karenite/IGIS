@@ -6,6 +6,7 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import GridLoader from "react-spinners/GridLoader";
 import { useNavigate } from "react-router-dom";
+import Feedback from "../Components/Feedback.js";
 
 const steps = [
   {
@@ -67,13 +68,8 @@ const AadharValidationStep2 = () => {
   );
   return (
     <>
-      <div className={styles.feedback}>
-        {" "}
-        <div className={styles.feedback_left}>
-          Want to help us getting a testcase?{" "}
-        </div>
-        <div className={styles.feedback_right}>Please Visit Here &rarr;</div>{" "}
-      </div>
+      <Feedback color="#4b56d2" />
+
       <div className={styles.preface}>
         <div>
           <img

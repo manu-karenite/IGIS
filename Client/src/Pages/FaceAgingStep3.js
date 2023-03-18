@@ -8,6 +8,7 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import Feedback from "../Components/Feedback.js";
 
 const steps = [
   {
@@ -76,13 +77,8 @@ const FaceAgingStep3 = () => {
   }, [imgLink]);
   return (
     <>
-      <div className={styles.feedback}>
-        {" "}
-        <div className={styles.feedback_left}>
-          Want to help us getting a testcase?{" "}
-        </div>
-        <div className={styles.feedback_right}>Please Visit Here &rarr;</div>{" "}
-      </div>
+      <Feedback color="#ffa500" />
+
       <div className={styles.preface}>
         <div>
           <img

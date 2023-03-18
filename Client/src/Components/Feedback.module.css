@@ -1,0 +1,44 @@
+.feedback {
+  color: #f1f6f5;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+}
+
+.feedback_left {
+  margin-right: 5px;
+}
+.feedback_right {
+  margin-left: 5px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.mid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.last {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.last button {
+  font-family: "IBM Plex Sans", sans-serif;
+
+  color: white;
+  font-weight: normal;
+  font-size: 1rem;
+  border-width: 3px;
+  border-color: white;
+  padding: 5px;
+  border-radius: 2px;
+  margin: 5px;
+
+  cursor: pointer;
+}

@@ -11,6 +11,7 @@ import Webcam from "react-webcam";
 import { aadharValidation } from "../API/aadharValidation.js";
 import Resizer from "react-image-file-resizer";
 import { useNavigate } from "react-router-dom";
+import Feedback from "../Components/Feedback.js";
 
 const steps = [
   {
@@ -171,13 +172,7 @@ const AadharValidationStep1 = () => {
 
   return (
     <>
-      <div className={styles.feedback}>
-        {" "}
-        <div className={styles.feedback_left}>
-          Want to help us getting a testcase?{" "}
-        </div>
-        <div className={styles.feedback_right}>Please Visit Here &rarr;</div>{" "}
-      </div>
+      <Feedback color="#4b56d2" />
       <div className={styles.preface}>
         <div>
           <img
@@ -202,7 +197,7 @@ const AadharValidationStep1 = () => {
       </div>
 
       <div className={styles?.uploadOuter}>
-        <div className={styles?.stepTitle}>Aadhar Validation</div>
+        <div className={styles?.stepTitle}>Upload AADHAR</div>
         <div className={styles?.panel}>
           <div className="sweet-loading">
             {/* <button onClick={() => setLoadingSpinner(!loadingSpinner)}>

@@ -1,13 +1,12 @@
 import React from "react";
-
+import styles from "./../CSS/DeblurringStep1.module.css";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
-import styles from "../CSS/FaceAgingStep1.module.css";
-import Resizer from "react-image-file-resizer";
-import CircleLoader from "react-spinners/CircleLoader";
 import { useNavigate } from "react-router-dom";
+import FadeLoader from "react-spinners/FadeLoader";
+import Resizer from "react-image-file-resizer";
 import { aadharValidation } from "../API/faceAging.js";
 import Feedback from "../Components/Feedback.js";
 
@@ -15,9 +14,7 @@ const steps = [
   {
     label: "Upload Picture",
   },
-  {
-    label: "Select your Preference",
-  },
+
   {
     label: "Result",
   },
@@ -37,11 +34,11 @@ const resizeFile = (file) =>
       "base64"
     );
   });
-const FaceAgingStep1 = () => {
+const DeblurringStep1 = () => {
+  const navigate = useNavigate();
+  let [color, setColor] = React.useState("#8fa600");
   const [imgLink, setImgLink] = React.useState(null);
   let [loadingSpinner, setLoadingSpinner] = React.useState(false);
-  let [color, setColor] = React.useState("#ffba50");
-  const navigate = useNavigate();
   const uploadImageHandler = async (e) => {
     setLoadingSpinner(true);
     try {
@@ -61,28 +58,29 @@ const FaceAgingStep1 = () => {
       console.log(err);
     }
   };
+
   const finalHandle = () => {
     if (window && window.localStorage) {
       window.localStorage.setItem(
-        "faceaging_step1",
+        "deblurring_step1",
         JSON.stringify({
           img_link: imgLink,
         })
       );
     }
-    navigate("/face-aging/step2");
+    navigate("/deblurring/step2");
   };
   return (
     <>
-      <Feedback color="#ffa500" />
+      <Feedback color="#babc4c" />
 
       <div className={styles.preface}>
         <div>
           <img
-            src="https://res.cloudinary.com/pet-life/image/upload/v1677993158/Screenshot_2023-03-05_104108_ltp1uz.png"
+            src="https://res.cloudinary.com/pet-life/image/upload/v1679164882/faces-logo-27011216_sltkon.png"
             alt="aadhar logo"
             height="120px"
-            onClick={() => navigate("/face-aging")}
+            onClick={() => navigate("/deblurring")}
             style={{ cursor: "pointer" }}
           />
         </div>
@@ -112,7 +110,7 @@ const FaceAgingStep1 = () => {
         /> */}
 
             <center>
-              <CircleLoader
+              <FadeLoader
                 color={color}
                 loading={loadingSpinner}
                 size={100}
@@ -152,4 +150,4 @@ const FaceAgingStep1 = () => {
   );
 };
 
-export default FaceAgingStep1;
+export default DeblurringStep1;

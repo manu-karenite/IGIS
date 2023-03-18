@@ -1,5 +1,5 @@
 .canvas {
-  background-color: #472183;
+  background-color: #8fa600;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -55,12 +55,12 @@
 }
 .finalStart button {
   font-family: "IBM Plex Sans", sans-serif;
-  background-color: #4b56d2;
+  background-color: #babc4c;
   width: 60%;
   color: white;
   font-weight: normal;
   font-size: 1.5rem;
   padding: 10px 2px;
-  border: #4b56d2;
+  border: #babc4c;
   cursor: pointer;
 }

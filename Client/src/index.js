@@ -14,6 +14,10 @@ import FaceAging from "./Pages/FaceAging";
 import FaceAgingStep1 from "./Pages/FaceAgingStep1";
 import FaceAgingStep2 from "./Pages/FaceAgingStep2";
 import FaceAgingStep3 from "./Pages/FaceAgingStep3";
+
+import Deblurring from "./Pages/Deblurring";
+import DeblurringStep1 from "./Pages/DeblurringStep1";
+import DeblurringStep2 from "./Pages/DeblurringStep2";
 import App from "./App";
 
 import reportWebVitals from "./reportWebVitals";
@@ -37,6 +41,9 @@ const router = createBrowserRouter([
   { path: "/face-aging/step1", element: <FaceAgingStep1 /> },
   { path: "/face-aging/step2", element: <FaceAgingStep2 /> },
   { path: "/face-aging/step3", element: <FaceAgingStep3 /> },
+  { path: "/deblurring", element: <Deblurring /> },
+  { path: "/deblurring/step1", element: <DeblurringStep1 /> },
+  { path: "/deblurring/step2", element: <DeblurringStep2 /> },
 ]);
 
 root.render(<RouterProvider router={router} />);

@@ -7,17 +7,11 @@ import WidgetsIcon from "@mui/icons-material/Widgets";
 import { HashLink } from "react-router-hash-link";
 import Fab from "@mui/material/Fab";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-
+import Feedback from "./Components/Feedback";
 function App() {
   return (
     <>
-      <div className={styles.feedback}>
-        <div className={styles.feedback_left}>
-          {" "}
-          Want to help us getting a testcase?
-        </div>
-        <div className={styles.feedback_right}>Please Visit Here &rarr;</div>
-      </div>
+      <Feedback color="#0d1f22" />
       <div className={styles.canvas}>
         <div className={styles.canvas_left}>
           <img src={process.env.REACT_APP_LOGO} alt="logo" />

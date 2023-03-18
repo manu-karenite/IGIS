@@ -7,6 +7,8 @@ import StepLabel from "@mui/material/StepLabel";
 import { compareImages } from "../API/aadharValidation.js";
 import HashLoader from "react-spinners/HashLoader";
 import { useNavigate } from "react-router-dom";
+import Feedback from "../Components/Feedback.js";
+
 const steps = [
   {
     label: "Click or Upload AADHAR Picture",
@@ -82,14 +84,8 @@ const AadharValidationStep5 = () => {
   );
   return (
     <>
-      {JSON.stringify(error)}
-      <div className={styles.feedback}>
-        {" "}
-        <div className={styles.feedback_left}>
-          Want to help us getting a testcase?{" "}
-        </div>
-        <div className={styles.feedback_right}>Please Visit Here &rarr;</div>{" "}
-      </div>
+      <Feedback color="#4b56d2" />
+
       <div className={styles.preface}>
         <div>
           <img

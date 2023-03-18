@@ -11,6 +11,8 @@ import CircleLoader from "react-spinners/CircleLoader";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import Feedback from "../Components/Feedback.js";
+
 const steps = [
   {
     label: "Upload Picture",
@@ -81,13 +83,8 @@ const FaceAgingStep2 = () => {
   );
   return (
     <>
-      <div className={styles.feedback}>
-        {" "}
-        <div className={styles.feedback_left}>
-          Want to help us getting a testcase?{" "}
-        </div>
-        <div className={styles.feedback_right}>Please Visit Here &rarr;</div>{" "}
-      </div>
+      <Feedback color="#ffa500" />
+
       <div className={styles.preface}>
         <div>
           <img

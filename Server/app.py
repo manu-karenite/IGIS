@@ -14,7 +14,7 @@ import os
 app=Flask(__name__)
 CORS(app)
 
-
+os.environ["FLASK_ENV"] = "development"
 cloudinary.config( 
   cloud_name = "pet-life", 
   api_key = "876346913441587", 
@@ -168,6 +168,31 @@ def generate_image():
     print(output)   
     return {"msg":output} 
 
+@app.route("/deblurring-result",methods = ['POST']) 
+def deblurring_result():
+    print("Deblurring Result Demo")
+    ans=(request.data.decode("utf-8"))
+
+    ans=ans[8:]
+    ans=ans[::-1]
+    ans=ans[2:]
+    ans=ans[::-1]
+    print(ans)
+    os.environ["REPLICATE_API_TOKEN"] = "31cc8b413eda51e3cd24c01a3ba0b41b1ceff314"
+    model = replicate.models.get("tencentarc/vqfr")
+    version = model.versions.get("f9085ea5bf9c8f2d7e5c64564234ab41b5bcd8cd61a58b59a3dde5cbb487721a")
+    inputs = {
+    # Input image. Output restored faces and whole image.
+    "image":ans,
+
+    # Input are aligned faces.
+    'aligned': False,
+    }
+    output = version.predict(**inputs)
+    print(output)
+
+    #answer is cloudinary link
+    return {"msg":output} 
 
 if __name__ == "__main__":
     app.run(debug=False)
