@@ -6,7 +6,7 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import { useNavigate } from "react-router-dom";
 import Feedback from "../Components/Feedback.js";
-
+import { Helmet } from "react-helmet";
 const steps = [
   {
     label: "Click or Upload AADHAR Picture",
@@ -69,6 +69,10 @@ const AadharValidationStep6 = () => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ImageMe | Aadhar | Step 6</title>
+      </Helmet>
       <Feedback color="#4b56d2" />
 
       <div className={styles.preface}>
@@ -94,20 +98,44 @@ const AadharValidationStep6 = () => {
         </div>
       </div>
       {result && (
-        <div className={styles?.result}>
-          <img
-            src="https://icon-library.com/images/verified-icon-png/verified-icon-png-14.jpg"
-            alt="correct"
-          />
-        </div>
+        <>
+          <div className={styles?.result}>
+            <img
+              src="https://icon-library.com/images/verified-icon-png/verified-icon-png-14.jpg"
+              alt="correct"
+            />
+          </div>
+          <h1
+            style={{
+              textAlign: "center",
+              color: "white",
+              backgroundColor: "green",
+              padding: "3px",
+            }}
+          >
+            Congatulations, Match Succesfull. Accepted
+          </h1>
+        </>
       )}
       {!result && (
-        <div className={styles?.result}>
-          <img
-            src="https://cdn.iconscout.com/icon/premium/png-512-thumb/face-recognition-error-2025190-1714098.png?f=avif&w=256"
-            alt="correct"
-          />
-        </div>
+        <>
+          <div className={styles?.result}>
+            <img
+              src="https://cdn.iconscout.com/icon/premium/png-512-thumb/face-recognition-error-2025190-1714098.png?f=avif&w=256"
+              alt="correct"
+            />
+          </div>
+          <h1
+            style={{
+              textAlign: "center",
+              color: "white",
+              backgroundColor: "red",
+              padding: "3px",
+            }}
+          >
+            Sorry, We could not Match your Images. Rejected
+          </h1>
+        </>
       )}
       <div className={styles?.out_row}>
         <div className={styles?.panel}>

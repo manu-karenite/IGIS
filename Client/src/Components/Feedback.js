@@ -10,11 +10,11 @@ const Feedback = ({ color }) => {
       </Link>
       <div className={styles.mid}>
         {" "}
-        <div className={styles.feedback_left}>
+        {/* <div className={styles.feedback_left}>
           {" "}
           Want to help us getting a testcase?
         </div>
-        <div className={styles.feedback_right}>Please Visit Here &rarr;</div>
+        <div className={styles.feedback_right}>Please Visit Here &rarr;</div> */}
       </div>
       <div className={styles?.last}>
         <div>

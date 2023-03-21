@@ -6,7 +6,7 @@ import List from "../Components/List.js";
 import WarningModal from "../Components/WarningModal.js";
 import { useNavigate } from "react-router-dom";
 import Feedback from "../Components/Feedback.js";
-
+import { Helmet } from "react-helmet";
 const Deblurring = () => {
   //for Warning Modal
   const navigate = useNavigate();
@@ -19,6 +19,10 @@ const Deblurring = () => {
   };
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ImageMe | Deblurring</title>
+      </Helmet>
       <>
         <WarningModal
           open={open}
@@ -42,12 +46,39 @@ const Deblurring = () => {
             <div className={styles.first}>Image Deblurring</div>
             <br />
             <div className={styles.second}>
-              When life gets blurry, <br />
+              When Life Gets Blurry, <br />
               Adjust your Focus
             </div>
             <br />
             <br />
-            <div className={styles.third}>---Image Improvement Module---</div>
+            <div className={styles.third}>
+              “ Captures Intricate Details of Image ”
+            </div>
+          </div>
+        </div>
+        <div className={styles?.bg}>
+          <div className={styles?.bg_right}>
+            <img
+              src="https://res.cloudinary.com/pet-life/image/upload/v1679340886/helkllo_1_g0dthv.png"
+              alt="cover_right"
+            />
+          </div>
+          <div className={styles?.bg_left}>
+            <div className={styles?.bg_left_one}>IT'S NITTY & GRITTY!</div>
+            <div className={styles?.bg_left_two}>An Image Deblurring App</div>
+            <div className={styles?.bg_left_three}>
+              That Does More than Wanted!
+            </div>
+            <div className={styles?.bg_left_four}>
+              <button>Try For Free</button>
+            </div>
+            <div className={styles?.bg_left_five}>&copy; ImageMe</div>
+          </div>
+          <div className={styles?.bg_right}>
+            <img
+              src="https://res.cloudinary.com/pet-life/image/upload/v1679340431/helkllo_1_qhunud.png"
+              alt="cover_right"
+            />
           </div>
         </div>
         <div className={styles.finalStart}>

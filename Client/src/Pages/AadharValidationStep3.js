@@ -5,7 +5,7 @@ import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import GridLoader from "react-spinners/GridLoader";
-
+import { Helmet } from "react-helmet";
 import * as faceapi from "face-api.js";
 import Webcam from "react-webcam";
 import { aadharValidation } from "../API/aadharValidation.js";
@@ -172,6 +172,10 @@ const AadharValidationStep3 = () => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ImageMe | Aadhar | Step 3</title>
+      </Helmet>
       <Feedback color="#4b56d2" />
 
       <div className={styles.preface}>

@@ -10,30 +10,30 @@ import Typography from "@mui/material/Typography";
 
 const steps = [
   {
-    label: "Click or Upload AADHAR Picture",
-    description: `Curabitur euismod hendrerit eros, sit amet vestibulum arcu faucibus id. Fusce et finibus sem, id luctus magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed consequat odio justo, ut lobortis erat tempus sit amet. In pellentesque orci ac lorem tristique, ut congue dolor hendrerit.`,
+    label: "Upload AADHAR Picture",
+    description: `Upload your Aadhar Picture in the Step 1 to follow.`,
   },
   {
     label: "Retrieve Age and Sex from AADHAR",
     description:
-      "Curabitur euismod hendrerit eros, sit amet vestibulum arcu faucibus id. Fusce et finibus sem, id luctus magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed consequat odio justo, ut lobortis erat tempus sit amet. In pellentesque orci ac lorem tristique, ut congue dolor hendrerit.",
+      "Your Uploaded Aadhar will be scanned for your Face based on our Models.",
   },
   {
-    label: "Click or Upload Current Picture",
-    description: `Curabitur euismod hendrerit eros, sit amet vestibulum arcu faucibus id. Fusce et finibus sem, id luctus magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed consequat odio justo, ut lobortis erat tempus sit amet. In pellentesque orci ac lorem tristique, ut congue dolor hendrerit.`,
+    label: "Upload Current Picture",
+    description: `Upload your Current Photograph/Selfie in the Step 3 to follow`,
   },
   {
-    label: "Retrieve Age and Sex from Current Picture",
+    label: "Retrieve Age and Sex from Current Image/Selfie",
     description:
-      "Curabitur euismod hendrerit eros, sit amet vestibulum arcu faucibus id. Fusce et finibus sem, id luctus magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed consequat odio justo, ut lobortis erat tempus sit amet. In pellentesque orci ac lorem tristique, ut congue dolor hendrerit.",
+      "Your Uploaded Image/Selfie will be scanned for your Face based on our Models.",
   },
   {
     label: "Compare and Contrast",
-    description: `Curabitur euismod hendrerit eros, sit amet vestibulum arcu faucibus id. Fusce et finibus sem, id luctus magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed consequat odio justo, ut lobortis erat tempus sit amet. In pellentesque orci ac lorem tristique, ut congue dolor hendrerit.`,
+    description: `Based on our Comparsion Algorithm, the two images will be compared to Identify the Person`,
   },
   {
     label: "Accept or Reject",
-    description: `Curabitur euismod hendrerit eros, sit amet vestibulum arcu faucibus id. Fusce et finibus sem, id luctus magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed consequat odio justo, ut lobortis erat tempus sit amet. In pellentesque orci ac lorem tristique, ut congue dolor hendrerit.`,
+    description: `Based on Step 5, Acceptance or Rejection would be given for Aadhar Verification`,
   },
 ];
 

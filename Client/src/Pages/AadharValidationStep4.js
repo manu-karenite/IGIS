@@ -7,7 +7,7 @@ import StepLabel from "@mui/material/StepLabel";
 import GridLoader from "react-spinners/GridLoader";
 import { useNavigate } from "react-router-dom";
 import Feedback from "../Components/Feedback.js";
-
+import { Helmet } from "react-helmet";
 const steps = [
   {
     label: "Click or Upload AADHAR Picture",
@@ -68,6 +68,10 @@ const AadharValidationStep4 = () => {
   );
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ImageMe | Aadhar | Step 4</title>
+      </Helmet>
       <Feedback color="#4b56d2" />
 
       <div className={styles.preface}>

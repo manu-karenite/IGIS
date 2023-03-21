@@ -6,6 +6,7 @@ import List from "../Components/List.js";
 import WarningModal from "../Components/WarningModal.js";
 import { useNavigate } from "react-router-dom";
 import Feedback from "../Components/Feedback.js";
+import { Helmet } from "react-helmet";
 const AaadharValidation = () => {
   //for Warning Modal
   const navigate = useNavigate();
@@ -18,6 +19,10 @@ const AaadharValidation = () => {
   };
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ImageMe | Aadhar Validation</title>
+      </Helmet>
       <>
         <WarningModal
           open={open}
@@ -47,6 +52,9 @@ const AaadharValidation = () => {
             <br />
             <br />
             <div className={styles.third}>“ Securing India Digitally ”</div>
+            <div style={{ color: "white", marginTop: "10px" }}>
+              &copy; ImageMe
+            </div>
           </div>
         </div>
         <div className={styles.phase2}>

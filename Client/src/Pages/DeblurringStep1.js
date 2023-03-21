@@ -9,7 +9,7 @@ import FadeLoader from "react-spinners/FadeLoader";
 import Resizer from "react-image-file-resizer";
 import { aadharValidation } from "../API/faceAging.js";
 import Feedback from "../Components/Feedback.js";
-
+import { Helmet } from "react-helmet";
 const steps = [
   {
     label: "Upload Picture",
@@ -72,6 +72,10 @@ const DeblurringStep1 = () => {
   };
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ImageMe | Deblurring | Step 1</title>
+      </Helmet>
       <Feedback color="#babc4c" />
 
       <div className={styles.preface}>

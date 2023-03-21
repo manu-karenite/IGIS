@@ -8,7 +8,7 @@ import { compareImages } from "../API/aadharValidation.js";
 import HashLoader from "react-spinners/HashLoader";
 import { useNavigate } from "react-router-dom";
 import Feedback from "../Components/Feedback.js";
-
+import { Helmet } from "react-helmet";
 const steps = [
   {
     label: "Click or Upload AADHAR Picture",
@@ -84,6 +84,10 @@ const AadharValidationStep5 = () => {
   );
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ImageMe | Aadhar | Step 5</title>
+      </Helmet>
       <Feedback color="#4b56d2" />
 
       <div className={styles.preface}>

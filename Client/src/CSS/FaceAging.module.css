@@ -42,3 +42,56 @@
   border: #ffa500;
   cursor: pointer;
 }
+.pretext {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.vector {
+  height: 400px;
+  width: 500px;
+}
+.boy {
+  position: absolute;
+  top: 500px;
+  height: 350px;
+  right: 200px;
+}
+.father {
+  position: absolute;
+  top: 500px;
+  height: 350px;
+  right: 360px;
+}
+.pretext_left {
+  margin-left: 300px;
+  margin-top: 50px;
+}
+.pretext_zero {
+  color: #2278d4;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 4px 0px;
+}
+.pretext_one {
+  padding: 4px 0px;
+  color: #191b21;
+  font-size: 35px;
+  font-weight: bolder;
+  width: 50%;
+  text-justify: inter-word;
+}
+.pretext_content {
+  margin-top: 30px;
+  width: 50%;
+  font-weight: light;
+}
+.btn {
+  margin: 30px 0px;
+  background-color: green;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+}

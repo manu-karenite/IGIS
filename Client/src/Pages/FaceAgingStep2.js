@@ -12,7 +12,7 @@ import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 import Feedback from "../Components/Feedback.js";
-
+import { Helmet } from "react-helmet";
 const steps = [
   {
     label: "Upload Picture",
@@ -83,6 +83,10 @@ const FaceAgingStep2 = () => {
   );
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ImageMe | Face Aging | Step 3</title>
+      </Helmet>
       <Feedback color="#ffa500" />
 
       <div className={styles.preface}>

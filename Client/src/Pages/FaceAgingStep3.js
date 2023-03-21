@@ -9,7 +9,7 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import Feedback from "../Components/Feedback.js";
-
+import { Helmet } from "react-helmet";
 const steps = [
   {
     label: "Upload Picture",
@@ -77,6 +77,10 @@ const FaceAgingStep3 = () => {
   }, [imgLink]);
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ImageMe | Face Aging | Step 3</title>
+      </Helmet>
       <Feedback color="#ffa500" />
 
       <div className={styles.preface}>

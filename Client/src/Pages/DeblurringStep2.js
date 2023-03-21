@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { deblurringResult } from "../API/deblurring.js";
 import FadeLoader from "react-spinners/FadeLoader";
 import Feedback from "../Components/Feedback.js";
-
+import { Helmet } from "react-helmet";
 const steps = [
   {
     label: "Upload Picture",
@@ -66,6 +66,10 @@ const DeblurringStep2 = () => {
   }, [data]);
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ImageMe | Deblurring | Step 2</title>
+      </Helmet>
       <Feedback color="#babc4c" />
 
       <div className={styles.preface}>

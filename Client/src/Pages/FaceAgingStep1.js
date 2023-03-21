@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Helmet } from "react-helmet";
 import Box from "@mui/material/Box";
 import Stepper from "@mui/material/Stepper";
 import Step from "@mui/material/Step";
@@ -74,6 +74,10 @@ const FaceAgingStep1 = () => {
   };
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>ImageMe | Face Aging | Step 3</title>
+      </Helmet>
       <Feedback color="#ffa500" />
 
       <div className={styles.preface}>

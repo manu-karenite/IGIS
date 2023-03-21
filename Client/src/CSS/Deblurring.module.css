@@ -64,3 +64,45 @@
   border: #babc4c;
   cursor: pointer;
 }
+.bg {
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  text-align: center;
+}
+.bg_left_one {
+  font-weight: bolder;
+  font-size: 25px;
+  margin: 20px;
+}
+.bg_left_two,
+.bg_left_three {
+  font-weight: bolder;
+  font-size: 30px;
+  margin: 10px;
+}
+.bg_left_four button {
+  background-color: #4b56d2;
+  color: white;
+  border: 1px solid #4b56d2;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.bg_left_five {
+  color: #525252;
+  font-weight: bold;
+  margin: 10px;
+  text-decoration: underline;
+  font-weight: 16px;
+}
+.bg_right img {
+  border: 1px #525252 solid;
+  border-radius: 20px;
+  height: 500px;
+}
