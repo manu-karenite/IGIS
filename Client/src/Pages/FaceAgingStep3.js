@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../CSS/FaceAgingStep3.module.css";
-
+import { saveAs } from "file-saver";
 import { useNavigate } from "react-router-dom";
 import { generateVideo, generateImage } from "../API/faceAging";
 import Box from "@mui/material/Box";
@@ -135,28 +135,43 @@ const FaceAgingStep3 = () => {
       </div>
       {result !==
         "https://cdn.dribbble.com/users/2869863/screenshots/6047846/media/7e168a28d4e9120cdfbecb41ba08e4b5.gif" && (
-        <div className={styles?.out_row}>
+        <>
           <div className={styles?.panel}>
-            <button
+            {" "}
+            <center>
+              <button
+                style={{ width: "20%", backgroundColor: "green" }}
+                onClick={() =>
+                  saveAs(result, `download_asset.${result?.split(".")[2]}`)
+                }
+              >
+                Download Asset
+              </button>
+            </center>
+          </div>
+          <div className={styles?.out_row}>
+            <div className={styles?.panel}>
+              <button
+                onClick={() => {
+                  window.localStorage.removeItem("faceaging_step2");
+                  navigate("/face-aging/step2");
+                }}
+              >
+                Restart
+              </button>
+            </div>
+            <div
+              className={styles?.panel}
               onClick={() => {
+                window.localStorage.removeItem("faceaging_step1");
                 window.localStorage.removeItem("faceaging_step2");
-                navigate("/face-aging/step2");
+                navigate("/face-aging");
               }}
             >
-              Restart
-            </button>
+              <button>Home</button>
+            </div>
           </div>
-          <div
-            className={styles?.panel}
-            onClick={() => {
-              window.localStorage.removeItem("faceaging_step1");
-              window.localStorage.removeItem("faceaging_step2");
-              navigate("/face-aging");
-            }}
-          >
-            <button>Home</button>
-          </div>
-        </div>
+        </>
       )}
     </>
   );

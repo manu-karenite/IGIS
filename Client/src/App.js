@@ -141,12 +141,6 @@ function App() {
 
           <img
             className={styles?.marq_img}
-            src="https://www.kindpng.com/picc/m/188-1882416_flask-python-logo-hd-png-download.png"
-            alt="marquee"
-          />
-
-          <img
-            className={styles?.marq_img}
             src="https://yktoo.solutions/images/logos/cloudinary-logo.png"
             alt="marquee"
           />
