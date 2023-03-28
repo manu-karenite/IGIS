@@ -144,10 +144,12 @@ const AadharValidationStep2 = () => {
       </div>
       {!show && (
         <div className={styles?.result}>
-          <div>Age (approximate) : {data?.age}</div>
+          <div>Age (approximate) : {Math.round(data?.age)} Years</div>
 
           <div>Gender: {data?.gender}</div>
-          <div>genderProbability: {data?.genderProbability}</div>
+          <div>
+            genderProbability: {Math.round(data?.genderProbability * 100)}%
+          </div>
         </div>
       )}
       {!show && (

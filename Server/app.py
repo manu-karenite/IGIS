@@ -10,6 +10,7 @@ import numpy as np
 import requests
 import replicate
 import os
+v=-1
 
 app=Flask(__name__)
 CORS(app)
@@ -34,9 +35,10 @@ def mse(img1, img2):
 
    diff = cv2.subtract(img11, img22)
    print(diff)
-   err = np.sum(diff**2)
-   print(err)
-   mse = err/(float(min_height*min_width))
+   mse=np.square(diff).mean()
+   #err = np.sum(diff**2)
+   #print(err)
+   #mse = err/(float(min_height*min_width))
    return mse
 
 
@@ -115,6 +117,10 @@ def compareImages():
     return {"msg":str(error)}
 @app.route("/generate-video",methods = ['POST']) 
 def generate_video():
+    import sys
+    sys.path.append('../Aging/model.py')
+    if v>0:
+        forward()
     os.environ["REPLICATE_API_TOKEN"] = "31cc8b413eda51e3cd24c01a3ba0b41b1ceff314"
     ans=(request.data.decode("utf-8"))
     ans=ans[12:]
@@ -138,6 +144,10 @@ def generate_video():
 
 @app.route("/generate-image",methods = ['POST']) 
 def generate_image():
+    import sys
+    sys.path.append('../Aging/model.py')
+    if v>0:
+        forward()
     os.environ["REPLICATE_API_TOKEN"] = "31cc8b413eda51e3cd24c01a3ba0b41b1ceff314"
     ans=(request.data.decode("utf-8"))
 
@@ -170,6 +180,10 @@ def generate_image():
 
 @app.route("/deblurring-result",methods = ['POST']) 
 def deblurring_result():
+    import sys
+    sys.path.append('../Deblurring/predict.py')
+    if v>0:
+        setup()
     print("Deblurring Result Demo")
     ans=(request.data.decode("utf-8"))
 

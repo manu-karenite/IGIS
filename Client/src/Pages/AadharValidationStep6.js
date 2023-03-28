@@ -113,7 +113,7 @@ const AadharValidationStep6 = () => {
               padding: "3px",
             }}
           >
-            Congatulations, Match Succesfull. Accepted
+            Congratulations, Match Succesfull. Accepted
           </h1>
         </>
       )}

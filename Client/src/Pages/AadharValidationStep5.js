@@ -121,10 +121,12 @@ const AadharValidationStep5 = () => {
           <div className={styles?.image}>
             <img src={ls1?.img_link} alt="pic1" />
           </div>
-          <div className={styles?.details}>Age (approximate) : {ls1?.age}</div>
+          <div className={styles?.details}>
+            Age (approximate) : {Math.round(ls1?.age)} Years
+          </div>
           <div className={styles?.details}>Gender: {ls1?.gender}</div>
           <div className={styles?.details}>
-            genderProbability: {ls1?.genderProbability}
+            genderProbability: {Math.round(ls1?.genderProbability * 100)}%
           </div>
         </div>
         <div>
@@ -141,10 +143,12 @@ const AadharValidationStep5 = () => {
             {" "}
             <img src={ls2?.img_link} alt="pic1" />
           </div>
-          <div className={styles?.details}>Age (approximate) : {ls2?.age}</div>
+          <div className={styles?.details}>
+            Age (approximate) : {Math.round(ls2?.age)} Years
+          </div>
           <div className={styles?.details}>Gender: {ls2?.gender}</div>
           <div className={styles?.details}>
-            genderProbability: {ls2?.genderProbability}
+            genderProbability: {Math.round(ls2?.genderProbability * 100)}%
           </div>
         </div>
       </div>
